@@ -58,30 +58,5 @@ public class QuickString
 			return fullString;
 		}
 	}
-
-	public static void main(String args[])
-	{
-		QuickString qs = new QuickString();
-		qs.append("Hey ");
-		qs.append("Buddy ");
-		qs.append("did you just see a real ");
-		qs.append("bright light? ");
-		qs.append("bright light? ");
-		qs.append("bright light?");
-		System.out.println(qs.toString());
-		System.out.println(qs.toString());
-
-		qs.append(" Hey ");
-		qs.append("Buddy ");
-		System.out.println(qs.toString());
-		System.out.println(qs.toString());
-
-		System.out.println(qs.delete("bright light? "));
-		System.out.println(qs.toString());
-		System.out.println(qs.toString());
-
-		qs.deleteAll("Buddy ");
-		System.out.println(qs.toString());
-		System.out.println(qs.toString());		
-	}
 }
+
