@@ -85,34 +85,4 @@ public class DynamicArray<T extends Comparable<T>>
 		for(int i = 0; i < ary.length; i++)
 			System.out.println("[" + i + "] " + ary[i]);
 	}
-
-	/* STAND ALONE TEST -- uncomment, then compile & run this file by itself */
-	/*	
-	public static void main(String args[])
-	{
-		DynamicArray<String> da = new DynamicArray<String>(String.class, 5);
-		System.out.println("Testing insert");		
-		da.insert("hey");
-		da.insert("there");
-		da.insert("buddy");
-		da.insert("what");
-		da.insert("going");
-		da.insert("on");
-
-		System.out.println("Testing toArray");
-		String strs[] = da.toArray();
-		for(String str : strs)
-			System.out.println(str);
-
-		System.out.println("Testing delete");
-		System.out.println(da.delete("hey"));
-		System.out.println("Testing delete object not found");		
-		System.out.println(da.delete("horrie"));		
-
-		System.out.println("------------------------Final State------------------------");		
-		da.printAll();	
-		System.out.println("Final Capacity: " + da.getCapacity());
-		System.out.println("Final Effective Size: " + da.getSize());
-	}
-	*/
 }
