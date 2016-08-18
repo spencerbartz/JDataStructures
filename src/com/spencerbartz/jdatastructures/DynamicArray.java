@@ -9,9 +9,9 @@ public class DynamicArray<T extends Comparable<T>>
 
 	public DynamicArray(Class<T> klasse, int size)
 	{
-    @SuppressWarnings("unchecked")
-    final T[] ary = (T[]) Array.newInstance(klasse, size);
-    this.ary = ary;
+		@SuppressWarnings("unchecked")
+		final T[] ary = (T[]) Array.newInstance(klasse, size);
+		this.ary = ary;
 		this.klasse = klasse;
 	}
 
@@ -73,7 +73,7 @@ public class DynamicArray<T extends Comparable<T>>
 	{
 		@SuppressWarnings("unchecked")
 		T[] newAry = (T[]) Array.newInstance(klasse, ary.length * 2);
-		
+
 		for(int i = 0; i < ary.length; i++)
 			newAry[i] = ary[i];		
 
@@ -86,3 +86,4 @@ public class DynamicArray<T extends Comparable<T>>
 			System.out.println("[" + i + "] " + ary[i]);
 	}
 }
+
