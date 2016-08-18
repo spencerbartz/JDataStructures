@@ -13,7 +13,7 @@ public class DynamicArrayTest extends TestCase
 		assertEquals(5, da.getCapacity());
 	}
 
-  public void testInsert() 
+	public void testInsert()
 	{
 		DynamicArray<String> da = new DynamicArray<String>(String.class, 5);
 		assertEquals(0, da.getSize());		
@@ -24,9 +24,9 @@ public class DynamicArrayTest extends TestCase
 		da.insert("five");
 		da.insert("six");
 
-    assertEquals(6, da.getSize());
+		assertEquals(6, da.getSize());
 		assertEquals(10, da.getCapacity());
-  }
+	}
 
 	public void testDelete()
 	{
