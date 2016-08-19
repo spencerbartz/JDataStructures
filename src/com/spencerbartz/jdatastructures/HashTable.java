@@ -32,4 +32,9 @@ public class HashTable<T>
 	{
 		return count;
 	}
+
+	public int hash(T t)
+	{
+		return t.hashCode() % ary.length;
+	}
 }

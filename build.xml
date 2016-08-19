@@ -1,6 +1,7 @@
 <project>
 	<target name="clean">
 		<delete dir="build"/>
+		<delete dir="release"/>
 	</target>
 
 	<target name="compile">
@@ -11,11 +12,7 @@
 		<javac srcdir="src/com/spencerbartz/jdatastructures" destdir="build"/>
 	</target>
 
-	<target name="test">
-		<javac srcdir="test/com/spencerbartz/jdatastructures" destdir="./"/>		
-	</target>
-
-	<target name="release">
+	<target name="release" depends="compile">
 		<mkdir dir="release"/>
 		<jar destfile="release/jdatastructures.jar" basedir="build">
 			<fileset dir="build" includes="build/com/spencerbartz/jdatastructures/*.class"/>

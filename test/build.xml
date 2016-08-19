@@ -1,0 +1,32 @@
+<project>
+	<target name="compile">
+
+		<fileset dir="../lib">
+			<include name="**/*.jar"/>
+		</fileset>
+
+		<javac srcdir="com/spencerbartz/jdatastructures" destdir="." classpath="../lib/junit-4.12.jar:../build/:../src/" includeantruntime="false"/>
+	</target>
+
+	<target name="run" depends="compile">
+		<junit>
+			<classpath>
+				<pathelement location="../lib/junit-4.12.jar"/>
+				<pathelement location="../build/"/>
+				<pathelement location="../src/"/>
+				<pathelement location="."/>
+			</classpath>
+
+			<batchtest>
+				<fileset dir=".">
+					<include name="**/*Test*"/>
+				</fileset>
+			</batchtest>
+
+			<formatter type="plain" usefile="false"/>
+			<!-- For shorter output
+				<formatter type="brief" usefile="false"/>
+			-->
+		</junit>
+	</target>
+</project>
