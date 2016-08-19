@@ -4,6 +4,10 @@ Generics did not exist when I took data structures in college. When Generics fin
 available I dabbled with them in some personal projects but did not go in depth.
 Revisiting common data structures with Generics has been a fun way to review and learn.
 
+# Available Data Structure Classes
+1. DynamicArray
+2. QuickString (basically StringBuffer. Might move this to a separate util lib later)
+
 # Requirements
 1. JDK
 2. Ant
