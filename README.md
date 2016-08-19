@@ -23,10 +23,10 @@ Revisiting common data structures with Generics has been a fun way to review and
 
 # How to use the JDataStructures library when you compile / run
 Compile:
-```javac -cp path/to/libs/jdatastructures.jar:. YourFile.java```
+```javac -cp path/to/libs/jdatastructures.jar:. Example.java```
 
 Run:
-```java -cp path/to/libs/jdatastructures.jar:. YourFile```
+```java -cp path/to/libs/jdatastructures.jar:. Example```
 
 # How to import the classes into your Java source
 Here is an example file called Example.java that uses the QuickString utility
