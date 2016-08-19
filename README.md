@@ -16,14 +16,12 @@ Revisiting common data structures with Generics has been a fun way to review and
 # Command line usage (Ant targets)
 1. ant compile
 2. ant release
-3. ant test
-4. ant clean
+3. ant clean
 
 # What each target does
 1. Compile JDataStructures code
 2. Create .jar file for release
-3. Compile JUnit tests
-4. Remove build directories
+3. Remove build and release directories
 
 # How to use the JDataStructures library when you compile / run
 Compile:
