@@ -1,34 +1,25 @@
 <project>
-    <target name="clean">
-        <delete dir="build"/>
-    </target>
+	<target name="clean">
+		<delete dir="build"/>
+	</target>
 
-    <target name="compile">
-      <fileset dir="lib">
-        <include name="**/*.jar"/>
-      </fileset>
-        <mkdir dir="build/com/spencerbartz/jdatastructures"/>
-        <javac srcdir="src/com/spencerbartz/jdatastructures" destdir="build"/>
-    </target>
+	<target name="compile">
+		<fileset dir="lib">
+			<include name="**/*.jar"/>
+		</fileset>
+		<mkdir dir="build/com/spencerbartz/jdatastructures"/>
+		<javac srcdir="src/com/spencerbartz/jdatastructures" destdir="build"/>
+	</target>
 
-		<target name="test">
-        <javac srcdir="test/com/spencerbartz/jdatastructures" destdir="./"/>
-		
-		</target>
+	<target name="test">
+		<javac srcdir="test/com/spencerbartz/jdatastructures" destdir="./"/>		
+	</target>
 
-<!--
-    <target name="jar">
-        <mkdir dir="build/jar"/>
-        <jar destfile="build/jar/HelloWorld.jar" basedir="build/classes">
-            <manifest>
-                <attribute name="Main-Class" value="oata.HelloWorld"/>
-            </manifest>
-        </jar>
-    </target>
-
-    <target name="run">
-        <java jar="build/jar/HelloWorld.jar" fork="true"/>
-    </target>
--->
+	<target name="release">
+		<mkdir dir="release"/>
+		<jar destfile="release/jdatastructures.jar" basedir="build">
+			<fileset dir="build" includes="build/com/spencerbartz/jdatastructures/*.class"/>
+		</jar>
+	</target>
 </project>
 
