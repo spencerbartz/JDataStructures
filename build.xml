@@ -9,7 +9,7 @@
 			<include name="**/*.jar"/>
 		</fileset>
 		<mkdir dir="build/com/spencerbartz/jdatastructures"/>
-		<javac srcdir="src/com/spencerbartz/jdatastructures" destdir="build"/>
+		<javac srcdir="src/com/spencerbartz/jdatastructures" destdir="build" includeantruntime="true"/>
 	</target>
 
 	<target name="release" depends="compile">

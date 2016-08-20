@@ -1,18 +1,18 @@
 package com.spencerbartz.jdatastructures;
 
-public class Node<T extends Comparable<T>>
+public class Node<T>
 {
-	private Class<T> klasse;
-	private T t;
+	protected Class<T> klasse;
+	protected T data;
 
-	public Node(Class<T> klasse, T t)
+	public Node(Class<T> klasse, T data)
 	{
 		this.klasse = klasse;
-		this.t = t;
+		this.data = data;
 	}
 
 	public T getData()
 	{
-		return t;
+		return data;
 	}
 }

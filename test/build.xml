@@ -16,17 +16,12 @@
 				<pathelement location="../src/"/>
 				<pathelement location="."/>
 			</classpath>
-
 			<batchtest>
 				<fileset dir=".">
 					<include name="**/*Test*"/>
 				</fileset>
 			</batchtest>
-
 			<formatter type="plain" usefile="false"/>
-			<!-- For shorter output
-				<formatter type="brief" usefile="false"/>
-			-->
 		</junit>
 	</target>
 </project>
