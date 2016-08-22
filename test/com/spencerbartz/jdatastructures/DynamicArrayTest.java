@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 import junit.framework.TestCase;
 
-public class DynamicArrayTest extends TestCase 
+public class DynamicArrayTest extends TestCase
 {
 	public void testConstructor()
 	{

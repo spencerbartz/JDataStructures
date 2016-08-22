@@ -1,11 +1,11 @@
 package com.spencerbartz.jdatastructures;
 
-public class Node<T>
+abstract public class AbstractNode<T extends Comparable<T>>
 {
 	protected Class<T> klasse;
 	protected T data;
-
-	public Node(Class<T> klasse, T data)
+	
+	public AbstractNode(Class<T> klasse, T data)
 	{
 		this.klasse = klasse;
 		this.data = data;
@@ -13,6 +13,6 @@ public class Node<T>
 
 	public T getData()
 	{
-		return data;
+		return this.data;
 	}
 }

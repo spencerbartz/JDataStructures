@@ -4,7 +4,7 @@
 		<delete dir="release"/>
 	</target>
 
-	<target name="compile">
+	<target name="build">
 		<fileset dir="lib">
 			<include name="**/*.jar"/>
 		</fileset>
@@ -12,7 +12,7 @@
 		<javac srcdir="src/com/spencerbartz/jdatastructures" destdir="build" includeantruntime="true"/>
 	</target>
 
-	<target name="release" depends="compile">
+	<target name="release" depends="build">
 		<mkdir dir="release"/>
 		<jar destfile="release/jdatastructures.jar" basedir="build">
 			<fileset dir="build" includes="build/com/spencerbartz/jdatastructures/*.class"/>
