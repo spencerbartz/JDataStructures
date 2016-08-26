@@ -1,15 +1,19 @@
 package com.spencerbartz.jdatastructures;
 
-import com.spencerbartz.jdatastructures.AbstractNode;
+import com.spencerbartz.jdatastructures.*;
 
-public class LinkedListNode<T extends Comparable<T>> extends AbstractNode<T>	
+public class LinkedListNode<T extends Comparable<T>>
 {
+	protected Class<T> klasse;
+	protected T data;
+
 	private LinkedListNode<T> next = null;
 	private LinkedListNode<T> prev = null;	
 
 	public LinkedListNode(Class<T> klasse, T data)
 	{
-		super(klasse, data);
+		this.klasse = klasse;
+		this.data = data;
 		next = null;
 		prev = null;
 	}
@@ -37,5 +41,15 @@ public class LinkedListNode<T extends Comparable<T>> extends AbstractNode<T>
 	public int compareTo(LinkedListNode<T> lln)
 	{
 		return data.compareTo(lln.data);
+	}
+
+	public String toString()
+	{
+		return data.toString();
+	}
+
+	public T getData()
+	{
+		return data;
 	}
 }

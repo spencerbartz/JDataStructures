@@ -3,26 +3,26 @@ package com.spencerbartz.jdatastructures;
 import java.util.Arrays;
 import junit.framework.TestCase;
 
-import com.spencerbartz.jdatastructures.Dummy;
+import com.spencerbartz.jdatastructures.*;
 
 public class LinkedListNodeTest extends TestCase 
 {
 	public void testConstructor()
 	{
 		LinkedListNode<String> justANode = new LinkedListNode<String>(String.class, "I'm just a node, in the world");
-		assertEquals("I'm just a node, in the world", justANode.getData());
+		assertEquals("I'm just a node, in the world", justANode.toString());
 	}
 
 	public void testAccessors()
 	{
 		LinkedListNode<String> middle = new LinkedListNode<String>(String.class, "I am the middle node");
-		LinkedListNode<String> next = new LinkedListNode<String>(String.class, "I am the next	 node");		
+		LinkedListNode<String> next = new LinkedListNode<String>(String.class, "I am the next node");		
 		LinkedListNode<String> prev = new LinkedListNode<String>(String.class, "I am the previous node");				
 
 		middle.setNext(next);
 		middle.setPrev(prev);
 
-		assertEquals(next, middle.getNext());
+		assertEquals(next, middle.getNext());	
 		assertEquals(prev, middle.getPrev());
 	}
 
@@ -33,21 +33,31 @@ public class LinkedListNodeTest extends TestCase
 		assertEquals(0, node1.compareTo(node2));
 	}
 
-	public void testCompareToWithUserDefinedType()
+	public void testDataTypes()
 	{
-		Dummy dee = new Dummy("Tweedle-Dee", 12);
-		Dummy dum = new Dummy("Tweedle-Dum", 12);		
-		LinkedListNode<Dummy> node1 = new LinkedListNode<Dummy>(Dummy.class, dee);
-		LinkedListNode<Dummy> node2 = new LinkedListNode<Dummy>(Dummy.class, dum);
+		Integer i1 = new Integer(10);
+		Integer i2 = new Integer(20);
 
-		assertEquals(-1, node1.compareTo(node2));
+		LinkedListNode<Integer> node1 = new LinkedListNode<Integer>(Integer.class, i1);
+		LinkedListNode<Integer> node2 = new LinkedListNode<Integer>(Integer.class, i2);
 
-		Dummy dumber = new Dummy("Lloyd Christmas", 37);
-		dumber.setName("Tweedle-Dee");
-		dumber.setAge(12);
-		LinkedListNode<Dummy> node3 = new LinkedListNode<Dummy>(Dummy.class, dumber);
-		
-		assertEquals(0, node1.compareTo(node3));
-	}	
+		assertTrue(node1.compareTo(node1) == 0);
+		assertTrue(node1.compareTo(node2) != 0); 
+		assertEquals(10, node1.getData().intValue());
+	}
+
+	public void testUserDefined()
+	{
+		Dummy d = new Dummy("Lloyd Christmas", 38);
+		LinkedListNode<Dummy> node = new LinkedListNode<Dummy>(Dummy.class, d);
+		assertEquals(38, node.getData().getAge());
+		assertEquals("Lloyd Christmas", node.getData().getName());
+
+		node.getData().setName("Harry Dunne");
+		node.getData().setAge(35);
+
+		assertEquals(35, node.getData().getAge());
+		assertEquals("Harry Dunne", node.getData().getName());
+	}
 }
 

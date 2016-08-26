@@ -2,6 +2,9 @@
 	<target name="clean">
 		<delete dir="build"/>
 		<delete dir="release"/>
+		<delete>
+  			<fileset dir="test" includes="**/*.class"/>
+		</delete>
 	</target>
 
 	<target name="build">
