@@ -1,6 +1,6 @@
 package com.spencerbartz.jdatastructures;
 
-public class Dummy implements Comparable<Dummy>
+public class Dummy implements Comparable<Dummy extends Comparable<T>>
 {
 	public String name;
 	public int age;
@@ -18,7 +18,7 @@ public class Dummy implements Comparable<Dummy>
 	}
 
 	public void setName(String name)
-	{
+	{	
 		this.name = name;
 	}
 
@@ -35,13 +35,5 @@ public class Dummy implements Comparable<Dummy>
 	public int getAge()
 	{
 		return age;
-	}
-
-	public int compareTo(Dummy other)
-	{
-		if(name == other.name && age == other.age)
-			return 0;
-		else
-			return -1;
 	}
 }
