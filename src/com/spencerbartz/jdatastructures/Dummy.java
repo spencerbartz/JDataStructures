@@ -47,6 +47,6 @@ public class Dummy implements Comparable<Dummy>
 
 	public String toString()
 	{
-		return "My name is " + name + " and I'm " + age + "years old";
+		return "My name is " + name + " and I'm " + age + " years old";
 	}
 }

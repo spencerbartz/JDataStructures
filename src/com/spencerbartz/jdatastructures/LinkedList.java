@@ -22,7 +22,7 @@ public class LinkedList<T extends Comparable<T>>
 	public int getLength()
 	{
 		return length;
-		}
+	}
 
 	public void insert(LinkedListNode<T> lln)
 	{
@@ -45,13 +45,43 @@ public class LinkedList<T extends Comparable<T>>
 		length++;
 	}
 
-	public void delete(LinkedListNode<T> nodeToDelete)
-	{
-		LinkedListNode<T> temp = nodeToDelete.getNext();
-		nodeToDelete.setData(nodeToDelete.getNext().getData());
-		nodeToDelete.setNext(temp.getNext());
+	public LinkedListNode<T> delete(LinkedListNode<T> nodeToDelete)
+	{		
+		// We're the last node
+		if(nodeToDelete.getNext() == null)
+		{			
+			nodeToDelete = null;
+		}
+		else if(nodeToDelete.compareTo(head) == 0)
+		{
+			LinkedListNode<T> temp = head.getNext();
+			head = null;
+			head = temp;
+		}
+		else
+		{
+			LinkedListNode<T> temp = nodeToDelete.getNext();	
+			nodeToDelete.setData(nodeToDelete.getNext().getData());
+			nodeToDelete.setNext(temp.getNext());
+			temp = null;			
+		}
 
 		length--;
+		return nodeToDelete;
+	}
+
+	public LinkedListNode<T> find(LinkedListNode<T> nodeToFind)
+	{	
+		LinkedListNode<T> cursor = head;
+		
+		while(cursor != null)
+		{
+			if(cursor.compareTo(nodeToFind) == 0)
+				return nodeToFind;
+			cursor = cursor.getNext();
+		}
+		
+		return null;
 	}
 
 	public String toString()
@@ -78,7 +108,7 @@ public class LinkedList<T extends Comparable<T>>
 	public LinkedListNode<T> getHead()	
 	{
 		return head;
-		}
+	}
 
 	public boolean empty()
 	{
