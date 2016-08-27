@@ -23,12 +23,14 @@ Revisiting common data structures with Generics has been a fun way to review and
 2. Create .jar file for release
 3. Remove build and release directories
 
-# How to use the JDataStructures library when you compile / run
+# How to use the JDataStructures library when you compile / run 
 Compile:
 ```javac -cp path/to/libs/jdatastructures.jar:. Example.java```
 
 Run:
 ```java -cp path/to/libs/jdatastructures.jar:. Example```
+
+If you're compiling / running from the same directory as the jar, be sure to add ```-cp ./yourjar.jar:.``` to your classpath
 
 # How to import the classes into your Java source
 Here is an example file called Example.java that uses the QuickString utility
