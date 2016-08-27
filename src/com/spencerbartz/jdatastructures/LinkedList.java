@@ -22,53 +22,66 @@ public class LinkedList<T extends Comparable<T>>
 	public int getLength()
 	{
 		return length;
-	}
+		}
 
 	public void insert(LinkedListNode<T> lln)
 	{
-		if(head == null)
+		LinkedListNode<T> cursor = head;
+
+		if(empty())
 		{
-			head = lln;
+				head = lln;
+		}
+		else
+		{
+			while(cursor.getNext() != null)
+			{
+				cursor = cursor.getNext();
+			}
+
+			cursor.setNext(lln);
+		}
+	
+		length++;
+	}
+
+	public void delete(LinkedListNode<T> nodeToDelete)
+	{
+		LinkedListNode<T> temp = nodeToDelete.getNext();
+		nodeToDelete.setData(nodeToDelete.getNext().getData());
+		nodeToDelete.setNext(temp.getNext());
+
+		length--;
+	}
+
+	public String toString()
+	{
+		StringBuffer sb = new StringBuffer();		
+
+		if(empty())
+		{
+			return "";
 		}
 		else
 		{
 			LinkedListNode<T> cursor = head;
 
-			while(cursor.getNext() != null)
-				cursor = cursor.getNext();
-			cursor.setNext(lln);			
-		}
-		
-		length++;
-	}
-
-	public LinkedListNode<T> delete(LinkedListNode<T> lln)
-	{
-		length--;			
-		return lln;
-	}
-
-	public LinkedListNode<T> search(LinkedListNode<T> lln)
-	{
-		LinkedListNode<T> cursor = head;
-
-		if(cursor != null)
-		{
-			while(cursor.getNext() != null)
+			while(cursor != null)
 			{
-				if(cursor.compareTo(lln) == 0)
-					return cursor;
-
+				sb.append(cursor.getData().toString() + "\n");
 				cursor = cursor.getNext();
 			}
+			return sb.toString();
 		}
-		
-		return null;
-	}		
+	}
 
 	public LinkedListNode<T> getHead()	
 	{
 		return head;
-	}
+		}
 
+	public boolean empty()
+	{
+			return head == null;
+	}
 }

@@ -39,6 +39,14 @@ public class Dummy implements Comparable<Dummy>
 
 	public int compareTo(Dummy d)
 	{
-		return age > d.age ? d.age : age;
-	}	
+		if(name.equals(d.getName()) && age == d.getAge())
+			return 0;
+		else 
+			return -1;
+	}
+
+	public String toString()
+	{
+		return "My name is " + name + " and I'm " + age + "years old";
+	}
 }

@@ -48,6 +48,11 @@ public class LinkedListNode<T extends Comparable<T>>
 		return data.toString();
 	}
 
+	public void setData(T t)
+	{
+		data = t;
+	}
+
 	public T getData()
 	{
 		return data;

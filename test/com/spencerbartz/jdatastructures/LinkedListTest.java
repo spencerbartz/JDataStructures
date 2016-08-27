@@ -15,30 +15,49 @@ public class LinkedListTest extends TestCase
 	}
 
 	public void testInsert()
-	{
-		/*
-		Dummy dee = new Dummy("Tweedle-Dee", 12);
-		LinkedListNode<Dummy> node = new LinkedListNode<Dummy>(Dummy.class, dee);	
+	{		
+		Dummy d1 = new Dummy("Lloyd Christmas", 38);		
+		LinkedListNode<Dummy> node1 = new LinkedListNode<Dummy>(Dummy.class, d1);		
+
+		Dummy d2 = new Dummy("Harry Dunne", 33);		
+		LinkedListNode<Dummy> node2 = new LinkedListNode<Dummy>(Dummy.class, d2);		
+
 		LinkedList<Dummy> list = new LinkedList<Dummy>();
 		assertEquals(0, list.getLength());
 
-		list.insert(node);
-		list.insert(node);
+		list.insert(node1);
+		list.insert(node2);
 		assertEquals(2, list.getLength());
-	*/
+		assertEquals(node1, list.getHead());
 	}
 
-	public void testSearch()
+	public void testToString()
+	{
+		Dummy d1 = new Dummy("Lloyd Christmas", 38);		
+		LinkedListNode<Dummy> node1 = new LinkedListNode<Dummy>(Dummy.class, d1);
+
+		Dummy d2 = new Dummy("Harry Dunne", 33);		
+		LinkedListNode<Dummy> node2 = new LinkedListNode<Dummy>(Dummy.class, d2);		
+		
+		LinkedList<Dummy> list = new LinkedList<Dummy>();
+		list.insert(node1);
+		list.insert(node2);
+
+		String dumb = "My name is Lloyd Christmas and I'm 38years old\n";
+    String dumber = "My name is Harry Dunne and I'm 33years old\n";
+		assertEquals(dumb + dumber, list.toString());
+	}
+
+	public void testDelete()
 	{
 		/*
-		Dummy dumNode = new Dummy("Tweedle-Dum", 13);
-		LinkedListNode<Dummy> dumNode = new LinkedListNode<Dummy>(Dummy.class, dumNode);	
-		
-		Dummy deeNode = new Dummy("Tweedle-Dee", 12);
-		LinkedListNode<Dummy> node = new LinkedListNode<Dummy>(Dummy.class, dee);	
+		Dummy d1 = new Dummy("Lloyd Christmas", 38);		
+		LinkedListNode<Dummy> node = new LinkedListNode<Dummy>(Dummy.class, d1);		
+		LinkedList<Dummy> list = new LinkedList<Dummy>();
+		list.delete(node);
 
-		LinkedList<Dummy> list = new LinkedList<Dummy>();	
-*/
+		assertEquals(0,list.getLength());
+	*/
 	}
 }
 
