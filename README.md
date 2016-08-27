@@ -6,7 +6,7 @@ Revisiting common data structures with Generics has been a fun way to review and
 
 # Available Data Structure Classes
 1. DynamicArray
-2. QuickString (basically StringBuffer. Might move this to a separate util lib later)
+2. LinkedList
 
 # Requirements
 1. JDK
