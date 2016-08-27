@@ -78,7 +78,6 @@ public class LinkedListTest extends TestCase
 
 	public void testFind()
 	{
-		
 		Dummy d1 = new Dummy("Moe", 138);		
 		LinkedListNode<Dummy> node1 = new LinkedListNode<Dummy>(Dummy.class, d1);
 		Dummy d2 = new Dummy("Larry", 133);		
@@ -94,7 +93,6 @@ public class LinkedListTest extends TestCase
 		list.insert(node3);
 
 		assertEquals(null, list.find(node4));
-	
 		assertEquals("Curly", list.find(node3).getData().getName());
 	}
 }
