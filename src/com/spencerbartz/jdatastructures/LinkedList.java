@@ -114,4 +114,16 @@ public class LinkedList<T extends Comparable<T>>
 	{
 			return head == null;
 	}
+
+	public boolean contains(LinkedListNode<T> nodeToFind)
+	{
+		LinkedListNode<T> cursor = head;
+		while(cursor != null)
+		{
+			if(cursor.compareTo(nodeToFind) == 0)
+				return true;
+		}
+		return false;	
+	}
 }
+

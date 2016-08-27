@@ -95,5 +95,19 @@ public class LinkedListTest extends TestCase
 		assertEquals(null, list.find(node4));
 		assertEquals("Curly", list.find(node3).getData().getName());
 	}
+
+	public void testContains(LinkedListNode<Dummy> nodeToFind)
+	{
+		Dummy d1 = new Dummy("Moe", 138);		
+		LinkedListNode<Dummy> node1 = new LinkedListNode<Dummy>(Dummy.class, d1);
+		Dummy d2 = new Dummy("Larry", 133);		
+		LinkedListNode<Dummy> node2 = new LinkedListNode<Dummy>(Dummy.class, d2);		
+
+		LinkedList<Dummy> list = new LinkedList<Dummy>();
+		list.insert(node1);
+
+		assertTrue(list.contains(node1));
+		assertFalse(list.contains(node2));
+	}
 }
 
