@@ -3,10 +3,11 @@ JDataStructures is a library of home-grown data structures using Java Generics.
 Generics did not exist when I took data structures in college. When Generics finally were 
 available I dabbled with them in some personal projects but did not go in depth.
 Revisiting common data structures with Generics has been a fun way to review and learn.
+The project is done in TDD style and I'm going commando: Not using any IDE just Ant!
 
 # Available Data Structure Classes
 1. DynamicArray
-2. QuickString (basically StringBuffer. Might move this to a separate util lib later)
+2. LinkedList
 
 # Requirements
 1. JDK
