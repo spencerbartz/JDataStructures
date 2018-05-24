@@ -72,8 +72,8 @@ public class Example
   public static void main(String args[])
   {
     Stack<Integer> stack = new Stack<Integer>(Integer.class, 5);
-		stack.push(new Integer(10));
-		Integer i = stack.pop();
+    stack.push(new Integer(10));
+    Integer i = stack.pop();
     System.out.println("The Number is: " + i.toString());
   }
 }
