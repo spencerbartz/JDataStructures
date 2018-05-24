@@ -60,7 +60,7 @@ take a look at build.xml or the [Ant documentation](http://ant.apache.org/) (Yea
 1. Compile: ```javac -cp path/to/libs/jdatastructures.jar:. Example.java ```
 2. Run: ```java -cp path/to/libs/jdatastructures.jar:. Example```
 
-If you're compiling / running from the same directory as the jar, be sure to add ```-cp ./yourjar.jar:.``` to your classpath
+If you're compiling / running from the same directory as the jar, be sure to add ```-cp ./jdatastructures.jar:.``` to your classpath
 
 ## How to import the classes into your Java source
 Here is an example file called Example.java that uses the Stack JDataStructure
