@@ -64,7 +64,7 @@ If you're compiling / running from the same directory as the jar, be sure to add
 
 ## How to import the classes into your Java source
 Here is an example file called Example.java that uses the Stack JDataStructure
-```
+```Java
 import com.spencerbartz.jdatastructures;
 
 public class Example
