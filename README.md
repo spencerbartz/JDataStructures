@@ -23,9 +23,10 @@ Given that, to use this library you will need to be familiar with command line /
 2. Ant
 3. JUnit
 
-##### The following are known as "targets" in the Ant build system (excluding those
-##### starting with "0." Those are just commands). For more information on targets,
-##### take a look at build.xml or the [Ant documentation](http://ant.apache.org/)
+## Getting Started
+The following are known as "targets" in the Ant build system (excluding those
+starting with "0." Those are just commands). For more information on targets,
+take a look at build.xml or the [Ant documentation](http://ant.apache.org/)
 
 ## Cloning the project (Where $> is your command line prompt):
 1. ```$> cd your/projects/directory/```
