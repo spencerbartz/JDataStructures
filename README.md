@@ -56,13 +56,13 @@ take a look at build.xml or the [Ant documentation](http://ant.apache.org/) (Yea
 2. Compile the Java code that makes up the JDataStructures test suite
 3. Run the tests and see the results!
 
-# How to use the JDataStructures library when you compile / run your own code
-## 1. Compile: ```javac -cp path/to/libs/jdatastructures.jar:. Example.java ```
-## 2. Run: ```java -cp path/to/libs/jdatastructures.jar:. Example```
+## How to use the JDataStructures library when you compile / run your own code
+1. Compile: ```javac -cp path/to/libs/jdatastructures.jar:. Example.java ```
+2. Run: ```java -cp path/to/libs/jdatastructures.jar:. Example```
 
 If you're compiling / running from the same directory as the jar, be sure to add ```-cp ./yourjar.jar:.``` to your classpath
 
-# How to import the classes into your Java source
+## How to import the classes into your Java source
 Here is an example file called Example.java that uses the Stack JDataStructure
 ```
 import com.spencerbartz.jdatastructures;
