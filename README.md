@@ -45,7 +45,7 @@ take a look at build.xml or the [Ant documentation](http://ant.apache.org/)
 3. Create .jar file for release
 
 ## Build the tests from the test root directory using the command line
-* ```$> cd JDataStructures/test```
+* ```$> cd JDataStructures/test``` (notice how this directory has its own build.xml file)
 1. ```$> ant clean```
 2. ```$> ant build```
 3. ```$> ant run```
