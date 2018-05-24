@@ -25,27 +25,27 @@ Given that, to use this library you will need to be familiar with command line /
 
 ## Getting Started
 The following are known as "targets" in the Ant build system (excluding those
-starting with "0." Those are just commands). For more information on targets,
+marked with an asterisk. Those are simply commands). For more information on targets,
 take a look at build.xml or the [Ant documentation](http://ant.apache.org/)
 
 ## Cloning the project (Where $> is your command line prompt):
-1. ```$> cd your/projects/directory/```
-2. ```$> git clone https://github.com/spencerbartz/JDataStructures.git```
+* ```$> cd your/projects/directory/```
+* ```$> git clone https://github.com/spencerbartz/JDataStructures.git```
 
 ## To Build the project from the root directory using the command line:
-0. ```$> cd JDataStructures/```
+* ```$> cd JDataStructures/```
 1. ```$> ant clean```
 2. ```$> ant compile```
 3. ```$> ant release```
 
 ### What each target does
-0. Enter the JDataStructures directory
+* Enter the JDataStructures directory
 1. Remove all residual .class files and .jar files which may be out of date
 2. Compile the Java code that makes up the JDataStructures library
 3. Create .jar file for release
 
 ## Build the tests from the test root directory using the command line
-0. ```$> cd JDataStructures/test```
+* ```$> cd JDataStructures/test```
 1. ```$> ant clean```
 2. ```$> ant build```
 3. ```$> ant run```
