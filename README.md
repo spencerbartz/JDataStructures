@@ -26,7 +26,7 @@ Given that, to use this library you will need to be familiar with command line /
 ## Getting Started
 The following are known as "targets" in the Ant build system (excluding those
 marked with an asterisk. Those are simply commands). For more information on targets,
-take a look at build.xml or the [Ant documentation](http://ant.apache.org/)
+take a look at build.xml or the [Ant documentation](http://ant.apache.org/) (Yeah I know it sucks, just take it like a programmer!)
 
 ## Cloning the project (Where $> is your command line prompt):
 * ```$> cd your/projects/directory/```
